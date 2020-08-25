@@ -1,19 +1,13 @@
 Cython is an optimising static compiler for both the Python programming language and the extended Cython programming language (based on Pyrex).
-
-It makes writing C extensions for Python as easy as Python itself
-
-To see introduction : https://cython.org/
+It makes writing C extensions for Python as easy as Python itself. To see introduction : https://cython.org/
 
 To start running the code you should:
 
 step 1.  download cython (in verion2). example in linux : sudo apt-get install cython
-
 step 2.  perpare your .pyx file, in here is SDFT.pyx
-
 step 3.  perpare setup.py file and do in linux : sudo python setup.py build_ext --inplace
 
 Then you will have created .c and .so file, that python can import the file and the functions(cpdef or def) in it.
-
 So,
 
 step 4.  do in linux : sudo python start.py
