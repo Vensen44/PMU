@@ -16,11 +16,12 @@ To change parameters, simply modify start.py file.
 
 
 
-You can find out that if you add a harmonic to vi array that is make by the frequency of freq_*N , for
+
+You can find out that if you add a harmonic to vi array that is make by the frequency of base_frequency*N , for
 N = 1,2,3,... , and the sampling rate is multiple of base_frequency(complying with Nyquist frequency) , then the 
 harmonic signal will not affect the result of frequency calculated by Smart_DFT().
 ex:
-vi = (np.cos(2*np.pi*freq_*t + theta)+np.cos(2*np.pi*(freq_*N)*t + theta))[0:ndata_].astype('complex128')
+vi = (np.cos(2*np.pi*freq_*t + theta)+np.cos(2*np.pi*(base_frequency*3)*t + theta))[0:ndata_].astype('complex128')
 the result of frequency calculated by Smart_DFT() and harmonic_analysis() will be freq_.
 
 But this method can't calculate the freq_ that is the multiple of base_frequency.
