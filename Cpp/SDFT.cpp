@@ -149,7 +149,7 @@ int main()
 	int ndata_ = fs_ * 0.1; // how many data you use to calculate to a frquecny, angle, and voltage(must > fs_ / base_frequency)
 	double theta = 30 * (M_PI / 180);  // the angle of signal(voltage) you want to creat(degree to radian)
 	float freq_ = 59;  // the frequency of signal(voltage) you want to creat(Hz)
-	int N_ = ceil(fs_ / base_frequency);  // N is the number of signal(voltage) data that is used to calculate a DFT value
+	int N_ = floor(fs_ / base_frequency);  // N is the number of signal(voltage) data that is used to calculate a DFT value
 	float *t = new float [fs_];  // generating 0 to 1 second array per 1 / fs_ second, [0, 1 / fs, 2 / fs, ...., 1]
 	complex<double> *vi = new complex<double> [fs_];
 	int shift_ = 0;  // shift points of vi array
