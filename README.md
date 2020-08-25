@@ -7,4 +7,4 @@ This code refers to :
 
 [2] J. Z. Yang, C. S. Yu, C. W. Liu, "A New Method for Power Signal Harmonic Analysis, " IEEE Trans. Power Delivery ,vol. 20, no2, pp.1235-1239, April 2005.
 
-There are three different version of them respectively : Python, Cython, and Cpp. 
+There are three different versions of them respectively : Python, Cython, and Cpp. 
