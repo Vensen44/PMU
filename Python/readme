@@ -16,10 +16,11 @@ the result will be wrong.
 And if fs(the sampling rate) is not the multiple of base_frequency(complying with Nyquist frequency) , the result of 
 angle and magnitude will be wrong.
 ex:
+frequency_siganl != N * base_frequency, N = 2,3,4,...
 base_frequency = 60 (Hz)
 fs = 2000 (Hz)
 The result fo frequency will be correct.
-But the result of angle and magnitude will be wrong.
+But the result of angle and magnitude will be wrong.(Because of some approximate)
 
 Let me set the data_per_set to be 10% of the vi array(data_per_set = 0.1 * fs = ndata). In Smart_DFT(),
 vi[shift:ndata+shift](shift = 0) gets samples from the first variable in the vi array, so if I set the ndata = 0.1 * fs,
