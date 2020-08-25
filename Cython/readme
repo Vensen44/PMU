@@ -39,13 +39,13 @@ fs_ = 2000 (Hz)
 The result fo frequency will be correct.
 But the result of angle and magnitude will be wrong.
 
-Let me set the vi array to be 10% of the whole array(size = 0.1 * fs_ = ndata).
-vi[shift:ndata+shift](shift = 0) gets samples from the first variable in the vi array, so if I set the ndata = 0.1 * fs,
-the angle calculated by Smart_DFT() function will be the angle that I set in make_signal().
-But if I use vi[i:ndata+i](i != 0 & 750), then the angle calculated by Smart_DFT() will not be the angle I set in
-make_signal(), because there is a shift(i points) of the first sample point.
-If I set frequency_siganl to be a number of multiples of 10 (ex : 10, 20, 30, ...) and
+Let me set the vi array to be 10% of the whole array(size = 0.1 * fs_ = ndata_).
+vi[shift:ndata+shift](shift = 0) gets samples from the first variable in the vi array, so if I set the ndata_ = 0.1 * fs,
+the angle calculated by Smart_DFT() function will be the angle that I set of vi.
+But if I use vi[i:ndata_+i](i != 0 & 750), then the angle calculated by Smart_DFT() will not be the angle I set of vi, because there is a shift(i points) of the first
+sample point.
+If I set freq_ to be a number of multiples of 10 (ex : 10, 20, 30, ...) and
 vi[ndata:ndata+ndata](ndata = 750 = fs * 0.1), then I can get the angle result as the original angle we set, because
-the first sample point is the starting point of the waves we generate in make_signal(). And if frequency_siganl is not a
+the first sample point is the starting point of the waves we generate of vi. And if frequency_siganl is not a
 number of multiples of 10 (ex : 68, 21, 103, ...), and the samples is same as
-vi[ndata:ndata+ndata](ndata = 750 = fs * 0.1), then the angle will not be the angle I set in make_signal().
+vi[ndata:ndata+ndata](ndata = 750 = fs * 0.1), then the angle will not be the angle I set of vi.
