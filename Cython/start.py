@@ -1,4 +1,4 @@
-import SDFT_one  # import your C file creation
+import SDFT  # import your C file creation
 import numpy as np
 
 ndata_ = 750 # how many data you use to calculate to a frquecny , angle , voltage
@@ -12,7 +12,7 @@ vi = np.cos(2*np.pi*freq_*t + theta)[0:ndata_].astype('complex128')
 # signal(voltage) array, you can add some harmonics or noises behinde vi array (type is complex)
 shift = 0  # shift points of vi array
 
-freq, Vrms, Vangle = SDFT_one.Smart_DFT(ndata_, fs_, N_, vi, shift, base_frequency)
+freq, Vrms, Vangle = SDFT.Smart_DFT(ndata_, fs_, N_, vi, shift, base_frequency)
 # call the function, Smart_DFT of the file, SDFT_one
 print 'frequency =', freq, 'Hz'
 print 'magnitude of signal(voltage) in RMS value = ', Vrms, 'Volt'
