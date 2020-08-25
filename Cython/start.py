@@ -12,6 +12,7 @@ base_frequency = 60  # frequency base of country , area or you want to it be (Hz
 freq_ = 59  # the frequency of signal(voltage) you want to creat (Hz)
 N_ = int(fs_/base_frequency)  # N is the number of signal(voltage) data that is used to calculate a DFT value
 t = np.arange(0,1,1.0/fs_)  # generating 0 to 1 second array per 1/fs_ second, [0, 1/fs, 2/fs, ...., 1]
+shift = 0  # shift points of vi array
 vi = np.cos(2*np.pi*freq_*t + theta)[0:ndata_].astype('complex128')
 # signal(voltage) array, you can add some harmonics or noises behinde vi array (type is complex)
 shift = 0  # shift points of vi array
