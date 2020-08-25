@@ -4,12 +4,12 @@ from Cython.Distutils import build_ext
 import numpy
 
 ext_modules=[ Extension("SDFT",
-              ["SDFT.pyx"],
-              libraries=["bcm2835","m"],
+              ["SDFT.pyx"],  # .pyx file name
+              libraries=["m"],  # include m library
               extra_compile_args = ["-ffast-math"])]
 
 setup(
-  name = "SDFT",
+  name = "SDFT",  # create .c and .so file named SDFT
   cmdclass = {"build_ext": build_ext},
   ext_modules = ext_modules,
-  include_dirs=[numpy.get_include()])
+  include_dirs=[numpy.get_include()])  # cython can include numpy
