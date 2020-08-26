@@ -9,7 +9,7 @@ But this method can't calculate the freq_ that is the multiple of base_frequency
 (freq_ = base_frequency * N , N = 2,3,4...)
 ex:
 freq_ = 100 (Hz)
-base_frequency = 50 (Hz)
+base_frequency = 50 (Hz) 
 the result will be wrong.
 
 And if fs_(the sampling rate) is not the multiple of base_frequency(complying with Nyquist frequency) , the result of 
